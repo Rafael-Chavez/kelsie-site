@@ -156,6 +156,78 @@
             font-size: 1.2rem;
         }
         
+        .projects-section {
+            background: #000000;
+            padding: 6rem 2rem;
+            color: white;
+        }
+        
+        .projects-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .projects-heading {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 600;
+            margin-bottom: 4rem;
+            color: #ffffff;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+        
+        .project-item {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .project-item:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-5px);
+        }
+        
+        .project-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 0 auto 2rem;
+            background: linear-gradient(135deg, #2d3748, #4a5568, #6b46c1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: #e2e8f0;
+            border: 3px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .project-title {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+        
+        .project-description {
+            color: #b8b8b8;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+        
         @media (max-width: 768px) {
             .hero-content {
                 grid-template-columns: 1fr;
@@ -176,6 +248,15 @@
                 width: 100%;
                 max-width: 300px;
                 justify-content: center;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .projects-heading {
+                font-size: 2.2rem;
             }
         }
     </style>
@@ -209,6 +290,32 @@
                         <span class="star-icon">✨</span>
                         See what's next in the series
                     </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="projects-section">
+        <div class="projects-container">
+            <h2 class="projects-heading">Other Working Projects</h2>
+            
+            <div class="projects-grid">
+                <div class="project-item">
+                    <div class="project-image">🌙</div>
+                    <h3 class="project-title">Lunar Chronicles</h3>
+                    <p class="project-description">A collection of interconnected short stories exploring life on humanity's first lunar colony. Each tale reveals the hopes, dreams, and struggles of those who dared to make the moon their home.</p>
+                </div>
+                
+                <div class="project-item">
+                    <div class="project-image">⚡</div>
+                    <h3 class="project-title">Storm Riders</h3>
+                    <p class="project-description">In a world where weather can be harnessed as a weapon, a young meteorologist discovers she has the power to control storms. A tale of elemental magic and political intrigue.</p>
+                </div>
+                
+                <div class="project-item">
+                    <div class="project-image">🔮</div>
+                    <h3 class="project-title">The Memory Keeper</h3>
+                    <p class="project-description">When memories can be extracted and stored like precious gems, one librarian becomes the guardian of humanity's most treasured and dangerous recollections.</p>
                 </div>
             </div>
         </div>
