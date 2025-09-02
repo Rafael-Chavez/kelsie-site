@@ -4,137 +4,148 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kelsie Wolfe - Author</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        .font-serif {
-            font-family: 'Playfair Display', serif;
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 90%;
+            background: linear-gradient(135deg, rgb(0, 196, 204) 0%, rgb(125, 42, 232) 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .content-container {
+            background: white;
+            border-radius: 12px;
+            padding: 3rem;
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #333;
+            font-weight: 600;
+        }
+        
+        p {
+            color: #666;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        
+        .browser-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .browser-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: #333;
+            transition: transform 0.2s ease;
+        }
+        
+        .browser-item:hover {
+            transform: translateY(-2px);
+        }
+        
+        .browser-icon {
+            width: 48px;
+            height: 48px;
+            background: #f0f0f0;
+            border-radius: 8px;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+        
+        .browser-name {
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        .additional-links {
+            border-top: 1px solid #eee;
+            padding-top: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .additional-links a {
+            color: #666;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-size: 0.9rem;
+        }
+        
+        .additional-links a:hover {
+            color: #333;
+        }
+        
+        @media (max-width: 480px) {
+            .content-container {
+                padding: 2rem;
+            }
+            
+            h1 {
+                font-size: 1.5rem;
+            }
+            
+            .browser-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
     </style>
 </head>
-<body class="bg-white text-gray-900">
-    <!-- Hero Section -->
-    <section class="min-h-screen flex items-center justify-center bg-gradient-to-br from-rose-50 to-purple-50">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <h1 class="font-serif text-6xl md:text-7xl font-bold text-gray-900 mb-6">
-                Kelsie Wolfe
-            </h1>
-            <p class="text-xl md:text-2xl text-gray-600 mb-8 font-light">
-                Author & Storyteller
-            </p>
-            <p class="text-lg text-gray-700 max-w-2xl mx-auto mb-12 leading-relaxed">
-                Welcome to my world of words. I craft stories that touch hearts, challenge minds, and inspire souls.
-            </p>
+<body>
+    <div class="content-container">
+        <h1>Welcome to My Literary World</h1>
+        <p>Please choose your preferred way to explore my stories and connect with my writing journey.</p>
+        
+        <div class="browser-grid">
+            <a href="#books" class="browser-item">
+                <div class="browser-icon">📚</div>
+                <span class="browser-name">My Books</span>
+            </a>
             
-            <!-- CTA Buttons -->
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <button class="bg-rose-600 hover:bg-rose-700 text-white px-8 py-3 rounded-lg font-medium transition-colors">
-                    Explore My Books
-                </button>
-                <button class="border-2 border-gray-300 hover:border-gray-400 text-gray-700 hover:text-gray-900 px-8 py-3 rounded-lg font-medium transition-colors">
-                    Get In Touch
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="py-20 px-6">
-        <div class="max-w-4xl mx-auto">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h2 class="font-serif text-4xl font-bold mb-6">About Me</h2>
-                    <p class="text-gray-700 mb-6 leading-relaxed">
-                        I'm passionate about creating stories that resonate with readers on a deep, emotional level. 
-                        My writing explores themes of human connection, personal growth, and the beautiful complexity of life.
-                    </p>
-                    <p class="text-gray-700 leading-relaxed">
-                        When I'm not writing, you can find me exploring new places, reading voraciously, 
-                        or spending time in nature seeking inspiration for my next story.
-                    </p>
-                </div>
-                <div class="bg-gray-100 aspect-square rounded-lg flex items-center justify-center">
-                    <span class="text-gray-500">Author Photo</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Books Section -->
-    <section class="py-20 px-6 bg-gray-50">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="font-serif text-4xl font-bold text-center mb-12">My Books</h2>
-            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Book placeholders -->
-                <div class="bg-white rounded-lg p-6 shadow-sm">
-                    <div class="bg-gray-200 aspect-[3/4] rounded mb-4 flex items-center justify-center">
-                        <span class="text-gray-500">Book Cover</span>
-                    </div>
-                    <h3 class="font-serif text-xl font-semibold mb-2">Coming Soon</h3>
-                    <p class="text-gray-600 text-sm">Your next favorite read is on its way.</p>
-                </div>
-                
-                <div class="bg-white rounded-lg p-6 shadow-sm">
-                    <div class="bg-gray-200 aspect-[3/4] rounded mb-4 flex items-center justify-center">
-                        <span class="text-gray-500">Book Cover</span>
-                    </div>
-                    <h3 class="font-serif text-xl font-semibold mb-2">Coming Soon</h3>
-                    <p class="text-gray-600 text-sm">Your next favorite read is on its way.</p>
-                </div>
-                
-                <div class="bg-white rounded-lg p-6 shadow-sm">
-                    <div class="bg-gray-200 aspect-[3/4] rounded mb-4 flex items-center justify-center">
-                        <span class="text-gray-500">Book Cover</span>
-                    </div>
-                    <h3 class="font-serif text-xl font-semibold mb-2">Coming Soon</h3>
-                    <p class="text-gray-600 text-sm">Your next favorite read is on its way.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="py-20 px-6">
-        <div class="max-w-2xl mx-auto text-center">
-            <h2 class="font-serif text-4xl font-bold mb-8">Stay Connected</h2>
-            <p class="text-gray-700 mb-8">
-                Join my mailing list to get updates on new releases, behind-the-scenes content, and exclusive insights into my writing process.
-            </p>
+            <a href="#about" class="browser-item">
+                <div class="browser-icon">✍️</div>
+                <span class="browser-name">About Me</span>
+            </a>
             
-            <!-- Mailing List Form -->
-            <form class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-                <input 
-                    type="email" 
-                    placeholder="Enter your email" 
-                    class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-rose-500 focus:border-transparent"
-                    required
-                />
-                <button 
-                    type="submit" 
-                    class="bg-rose-600 hover:bg-rose-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
-                >
-                    Subscribe
-                </button>
-            </form>
+            <a href="#blog" class="browser-item">
+                <div class="browser-icon">📝</div>
+                <span class="browser-name">Blog</span>
+            </a>
+            
+            <a href="#contact" class="browser-item">
+                <div class="browser-icon">📧</div>
+                <span class="browser-name">Contact</span>
+            </a>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12 px-6">
-        <div class="max-w-4xl mx-auto text-center">
-            <h3 class="font-serif text-2xl font-bold mb-4">Kelsie Wolfe</h3>
-            <p class="text-gray-400 mb-6">Author & Storyteller</p>
-            <div class="flex justify-center space-x-6 mb-8">
-                <a href="#" class="text-gray-400 hover:text-white transition-colors">Instagram</a>
-                <a href="#" class="text-gray-400 hover:text-white transition-colors">Twitter</a>
-                <a href="#" class="text-gray-400 hover:text-white transition-colors">Goodreads</a>
-                <a href="#" class="text-gray-400 hover:text-white transition-colors">Email</a>
-            </div>
-            <p class="text-gray-500 text-sm">© 2024 Kelsie Wolfe. All rights reserved.</p>
+        
+        <div class="additional-links">
+            <a href="#newsletter">Newsletter</a>
+            <a href="#events">Events</a>
+            <a href="#reviews">Reviews</a>
         </div>
-    </footer>
+    </div>
 </body>
 </html>
