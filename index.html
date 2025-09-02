@@ -259,6 +259,68 @@
                 font-size: 2.2rem;
             }
         }
+        
+        .profile-section {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f0f23 100%);
+            padding: 4rem 2rem;
+            color: white;
+        }
+        
+        .profile-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .profile-image {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #2d3748, #4a5568, #6b46c1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: #e2e8f0;
+            border: 4px solid rgba(255, 255, 255, 0.2);
+            margin: 0 auto;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .profile-content h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: #ffffff;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .profile-content p {
+            color: #d1d5db;
+            line-height: 1.7;
+            font-size: 1.1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .profile-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
+            }
+            
+            .profile-image {
+                width: 200px;
+                height: 200px;
+            }
+            
+            .profile-content h2 {
+                font-size: 2rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -302,21 +364,51 @@
             <div class="projects-grid">
                 <div class="project-item">
                     <div class="project-image">🌙</div>
-                    <h3 class="project-title">Lunar Chronicles</h3>
+                    <h3 class="project-title">Beneath the Moonlit Leaves</h3>
                     <p class="project-description">A collection of interconnected short stories exploring life on humanity's first lunar colony. Each tale reveals the hopes, dreams, and struggles of those who dared to make the moon their home.</p>
                 </div>
                 
                 <div class="project-item">
                     <div class="project-image">⚡</div>
-                    <h3 class="project-title">Storm Riders</h3>
+                    <h3 class="project-title">Overdosed</h3>
                     <p class="project-description">In a world where weather can be harnessed as a weapon, a young meteorologist discovers she has the power to control storms. A tale of elemental magic and political intrigue.</p>
                 </div>
                 
                 <div class="project-item">
                     <div class="project-image">🔮</div>
-                    <h3 class="project-title">The Memory Keeper</h3>
+                    <h3 class="project-title">Blood of Xulorus</h3>
                     <p class="project-description">When memories can be extracted and stored like precious gems, one librarian becomes the guardian of humanity's most treasured and dangerous recollections.</p>
                 </div>
+                <div class="project-item">
+                    <div class="project-image">🌙</div>
+                    <h3 class="project-title">Wrath of a Pirate Wraith</h3>
+                    <p class="project-description">A collection of interconnected short stories exploring life on humanity's first lunar colony. Each tale reveals the hopes, dreams, and struggles of those who dared to make the moon their home.</p>
+                </div>
+                
+                <div class="project-item">
+                    <div class="project-image">⚡</div>
+                    <h3 class="project-title">Depths of Naverell</h3>
+                    <p class="project-description">In a world where weather can be harnessed as a weapon, a young meteorologist discovers she has the power to control storms. A tale of elemental magic and political intrigue.</p>
+                </div>
+                
+                <div class="project-item">
+                    <div class="project-image">🔮</div>
+                    <h3 class="project-title">Let's Play Gods</h3>
+                    <p class="project-description">When memories can be extracted and stored like precious gems, one librarian becomes the guardian of humanity's most treasured and dangerous recollections.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="profile-section">
+        <div class="profile-container">
+            <div class="profile-image">
+                Profile Photo
+            </div>
+            
+            <div class="profile-content">
+                <h2>Kelsie Burson</h2>
+                <p>is an author of fantasy and sci-fi books that explore what it means to be overwhelmingly alive in worlds that refuse to slow down. She loves screamy music, being crafty and dreaming about one day traveling full-time in an RV with her brilliant husband and their two fur-babies. When she's not reading or writing, you can find her in the local Starbucks line or roasting s'mores around a campfire in the middle of nowhere.</p>
             </div>
         </div>
     </section>
