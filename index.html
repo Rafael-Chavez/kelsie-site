@@ -321,6 +321,115 @@
                 font-size: 2rem;
             }
         }
+        
+        .newsletter-section {
+            background: #000000;
+            padding: 5rem 2rem;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+        
+        .newsletter-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(1px 1px at 50px 25px, #fff, transparent),
+                radial-gradient(1px 1px at 150px 75px, #fff, transparent),
+                radial-gradient(2px 2px at 250px 40px, #fff, transparent),
+                radial-gradient(1px 1px at 350px 90px, #fff, transparent);
+            background-repeat: repeat;
+            background-size: 400px 120px;
+            animation: starTwinkle 10s linear infinite;
+            opacity: 0.3;
+            pointer-events: none;
+        }
+        
+        .newsletter-container {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .newsletter-heading {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: #ffffff;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .newsletter-subheading {
+            font-size: 1.3rem;
+            color: #b8b8b8;
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+        }
+        
+        .newsletter-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .newsletter-feature {
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .newsletter-feature h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: #ffffff;
+        }
+        
+        .newsletter-feature p {
+            font-size: 0.9rem;
+            color: #d1d5db;
+            line-height: 1.5;
+        }
+        
+        .newsletter-cta {
+            background: linear-gradient(135deg, #6b46c1, #8b5cf6, #a855f7);
+            border: none;
+            padding: 1.2rem 3rem;
+            border-radius: 50px;
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 4px 20px rgba(107, 70, 193, 0.3);
+        }
+        
+        .newsletter-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(107, 70, 193, 0.5);
+            background: linear-gradient(135deg, #7c3aed, #9333ea, #c084fc);
+        }
+        
+        @media (max-width: 768px) {
+            .newsletter-heading {
+                font-size: 2.2rem;
+            }
+            
+            .newsletter-features {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -410,6 +519,37 @@
                 <h2>Kelsie Burson</h2>
                 <p>is an author of fantasy and sci-fi books that explore what it means to be overwhelmingly alive in worlds that refuse to slow down. She loves screamy music, being crafty and dreaming about one day traveling full-time in an RV with her brilliant husband and their two fur-babies. When she's not reading or writing, you can find her in the local Starbucks line or roasting s'mores around a campfire in the middle of nowhere.</p>
             </div>
+        </div>
+    </section>
+    
+    <section class="newsletter-section">
+        <div class="newsletter-container">
+            <h2 class="newsletter-heading">Join the Constellation</h2>
+            <p class="newsletter-subheading">Get exclusive access to new worlds, behind-the-scenes magic, and cosmic adventures delivered directly to your inbox</p>
+            
+            <div class="newsletter-features">
+                <div class="newsletter-feature">
+                    <h4>📚 Early Access</h4>
+                    <p>Be the first to read exclusive chapters and get sneak peeks at upcoming releases</p>
+                </div>
+                
+                <div class="newsletter-feature">
+                    <h4>✨ Writing Journey</h4>
+                    <p>Behind-the-scenes glimpses into the creative process, character development, and world-building</p>
+                </div>
+                
+                <div class="newsletter-feature">
+                    <h4>🎵 Curated Vibes</h4>
+                    <p>Monthly playlists of screamy music and atmospheric sounds that inspire each story</p>
+                </div>
+                
+                <div class="newsletter-feature">
+                    <h4>🏕️ Life Adventures</h4>
+                    <p>Real-life camping stories, RV dreams, crafty projects, and s'mores-fueled inspiration</p>
+                </div>
+            </div>
+            
+            <a href="#signup" class="newsletter-cta">Sign Up Now</a>
         </div>
     </section>
 </body>
